@@ -1,8 +1,5 @@
-console.log('ok ' + ' my' + 'Friend')
-console.log('ok ' + ' my' + 'Friend')
+import React from 'react'
 
-const func = () => {
-  return 'ok'
-}
+const Spinner = props => <h1>Spinner</h1>
 
-export default func
+export default Spinner

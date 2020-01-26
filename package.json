@@ -13,7 +13,7 @@
     }
   },
   "lint-staged": {
-    "**/*.js": [
+    "src/**/*.js": [
       "npm run lint:fix"
     ]
   },

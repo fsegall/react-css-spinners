@@ -13,9 +13,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
-      "npm run lint:fix"
-    ]
+    "*.js": "npm run lint:fix"
   },
   "repository": {
     "type": "git",

@@ -1,58 +1,64 @@
 {
-    "name": "react-css-spinners",
-    "version": "1.0.0",
-    "description": "Css only spinners for React",
-    "main": "index.js",
-    "scripts": {
-        "prebuild": "rimraf dist",
-        "build": "rollup -c",
-        "lint": "eslint '**/*.js'",
-        "lint:fix": "npm run lint -- --fix"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.js": "npm run lint:fix"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/fsegall/react-css-spinners.git"
-    },
-    "keywords": [
-        "react",
-        "css",
-        "spinners"
-    ],
-    "author": "Alex",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/fsegall/react-css-spinners/issues"
-    },
-    "homepage": "https://github.com/fsegall/react-css-spinners#readme",
-    "devDependencies": {
-        "@babel/cli": "^7.8.3",
-        "@babel/core": "^7.8.3",
-        "@babel/preset-env": "^7.8.3",
-        "@babel/preset-react": "^7.8.3",
-        "eslint": "^6.8.0",
-        "eslint-config-standard": "^14.1.0",
-        "eslint-plugin-import": "^2.20.0",
-        "eslint-plugin-node": "^11.0.0",
-        "eslint-plugin-promise": "^4.2.1",
-        "eslint-plugin-react": "^7.18.0",
-        "eslint-plugin-standard": "^4.0.1",
-        "husky": "^4.2.1",
-        "lint-staged": "^10.0.2",
-        "rimraf": "^3.0.0",
-        "rollup": "^1.29.1",
-        "rollup-plugin-babel": "^4.3.3",
-        "rollup-plugin-node-resolve": "^5.2.0",
-        "rollup-plugin-terser": "^5.2.0"
-    },
-    "dependencies": {
-        "react": "^16.12.0"
+  "name": "react-css-spinners",
+  "version": "1.0.0",
+  "description": "Css only spinners for React",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "sideEffects": false,
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": "npm run lint:fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsegall/react-css-spinners.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "spinners"
+  ],
+  "author": "Alex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fsegall/react-css-spinners/issues"
+  },
+  "homepage": "https://github.com/fsegall/react-css-spinners#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.29.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-terser": "^5.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.2"
+  },
+  "engines": {
+    "node": ">=8"
+  }
 }

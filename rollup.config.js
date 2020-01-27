@@ -1,6 +1,7 @@
 import babel from 'rollup-plugin-babel'
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
+import { string } from 'rollup-plugin-string'
 
 const dist = 'dist'
 const bundle = 'bundle'
@@ -23,8 +24,8 @@ export default {
       name: 'ReactCssSpinners', // To reference in the window object
       file: `${dist}/${bundle}.umd.js`,
       globals: {
-        react: 'React'
-        /* 'react-dom': 'ReactDOM' */
+        react: 'React',
+        'react-dom': 'ReactDOM'
       },
       format: 'umd'
     }
@@ -37,6 +38,9 @@ export default {
       babelrc: false, // to ignore @babel/transform-runtime
       exclude: 'node_modules/**',
       presets: ['@babel/env', '@babel/react']
+    }),
+    string({
+      include: '**/*.css'
     }),
     production && terser()
   ]
